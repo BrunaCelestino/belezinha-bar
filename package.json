@@ -1,0 +1,39 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Serviço de administração de pedidos para o bar Belezinha",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunaCelestino/belezinha-bar.git"
+  },
+  "keywords": [
+    "bar",
+    "restaurant",
+    "order",
+    "customer",
+    "kitchen"
+  ],
+  "author": "Bruna Celestino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunaCelestino/belezinha-bar/issues"
+  },
+  "homepage": "https://github.com/BrunaCelestino/belezinha-bar#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^9.1.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

@@ -6,7 +6,6 @@ const { SECRET } = process.env;
 
 
 const create = async (req, res) => {
-    console.log('Request Body:', req.body); 
   const { username, name, role } = req.body;
 
 

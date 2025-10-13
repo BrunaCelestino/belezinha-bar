@@ -425,6 +425,44 @@ const removeAllOrders = async (req, res) => {
     }
 }
 
+// //gerar um relatorio que traga todos os dados dos pedidos do dia atual, total de pedidos, total de itens vendidos, total faturado, total de descontos aplicados e total a receber, total recebido, total de pedidos cancelados, itens por pedido, que seja baixavel em pdf
+// const generateDailyReport = async (req, res) => {
+//    try {
+//         const startOfDay = DateTime.now().setZone("America/Sao_Paulo").startOf('day').toJSDate();
+//         const endOfDay = DateTime.now().setZone("America/Sao_Paulo").endOf('day').toJSDate();
+
+//         const orders = await OrderSchema.find({
+//             createdAt: { $gte: startOfDay, $lte: endOfDay }
+//         });         
+//         return res.status(200).json({
+//             message: 'Relatório diário gerado com sucesso',
+//             report: {
+//                 totalOrders: orders.length,
+//                 totalItemsSold: orders.reduce((acc, order) => acc + order.products.length, 0),
+//                 totalRevenue: orders.reduce((acc, order) => acc + order.total, 0),
+//                 totalDiscounts: orders.reduce((acc, order) => acc + order.discount, 0),
+//                 totalToReceive: orders.reduce((acc, order) => acc + order.total - order.paid, 0),
+//                 totalReceived: orders.reduce((acc, order) => acc + order.paid, 0),
+//                 totalCancelled: orders.filter(order => order.status === 'CANCELADO').length,
+//                 itemsPerOrder: orders.map(order => order.products.length)
+//             }
+//         });
+
+//         // Implementar a geração do PDF aqui, se necessário
+//         const pdfReport = await generatePDFReport(report);
+//         return res.status(200).json({
+//             message: 'Relatório diário gerado com sucesso', 
+//             report: pdfReport
+//         });
+        
+//     } catch (error) {
+//         return res.status(500).json({
+//             message: 'Erro ao gerar o relatório diário',
+//             details: error.message
+//         });
+//     }
+// }
+
 module.exports = {
     getOrderNumber,
     getKitchenOrders,

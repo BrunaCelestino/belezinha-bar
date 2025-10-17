@@ -207,6 +207,7 @@ const getProductByName = async (req, res) => {
             data: products
         });
     } catch (error) {
+        console.log(error.message)
         return res.status(500).json({
             message: 'Erro ao buscar produtos por nome',
             details: error.message,
